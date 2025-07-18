@@ -1,0 +1,47 @@
+
+<div class="container">
+    <h1>To-Do Application</h1>
+    <hr/>
+    <form>
+    <div class="form-group">
+        <!-- <div class="col-6"> -->
+        <!-- <label for="inputTask">Task</label> -->
+        <input type="text" name="task" [(ngModel)]="newTask" class="input-task" id="task" placeholder="Enter New Task">
+        <button id="submitButton" type="submit" class="btn" (click)="addTask()">Add</button>
+        
+        <!-- </div> -->
+        <div class="col-3">
+          <small id="errorMessage" class="text-danger input-small">{{errorMsg}}</small>
+        </div>
+        
+    </div>
+    </form>
+    <hr/>
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Task</th>
+      <th scope="col">Completed</th>
+      <th scope="col">Edit</th>
+      <th scope="col">Delete</th>
+      
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let item of todoList;let i=index;">
+      <ng-container *ngIf="!item.isEdit">
+        <td>{{item.task}}</td>
+        <td><input id="myCheckbox" type="checkbox" [(ngModel)]="item.completed" (change)="toggleCompleted(i)"></td>
+        <td><button id="btnEdit" class="btn editcancelButton btn-sm" (click)="EditTask(i)">Edit</button></td>
+        <td><button id="btnDel" class="btn deleteButton btn-sm" (click)="deleteTask(item.id)">Delete</button></td>
+      </ng-container>
+      <ng-container *ngIf="item.isEdit">
+        <td><input id="EditTaskInput" [(ngModel)]="item.task" ></td>
+        <td><input id="myCheckbox" type="checkbox" [(ngModel)]="item.completed" (change)="toggleCompleted(i)"></td>
+        <td><button id="btnSave" (click)="SaveTask(item.id)" class="btn saveButton btn-sm">Save</button></td>
+        <td><button id="btnCancel" (click)="CancelEdit(i)" class="btn editcancelButton btn-sm">Cancel</button></td>
+      </ng-container>
+    </tr>
+  </tbody>
+</table>
+</div>
