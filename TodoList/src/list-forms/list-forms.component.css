@@ -1,0 +1,186 @@
+.text-gradient {
+ color: #4966CC; 
+ background-image: linear-gradient(45deg, #4052F5 , #b73992 68%); 
+ background-clip: text; 
+ -webkit-background-clip: text; 
+ -webkit-text-fill-color: transparent; 
+}
+
+h1{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding-top: 5px; 
+    font-size: 45px;
+}
+
+.main{
+    /* display: flex; */
+    /* justify-content: space-around; */
+    display: block;
+    justify-items: flex-start;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 2px;
+    background-color: rgb(205, 243, 243);
+    /* box-shadow: 0 2px 10px rgba(23, 1, 31, 0.1); */
+    box-shadow: 0 5px 10px rgb(179, 151, 239);
+}
+
+form{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 100px;
+    background-color: rgb(205, 243, 243);
+}
+
+form input{
+    margin-top: 20px;
+    width: 200px;
+    height: 40px;
+    border-radius: 8px;
+    border-color: blueviolet;  
+}
+
+#EditTaskInput{
+    border-radius: 10px;
+    border-color: blueviolet;  
+}
+
+.button-add{
+    height: 40px;
+    margin-left: 20px;
+    margin-top: 20px;
+    background-color: rgb(52, 236, 36);
+    color: blue;
+    border-radius: 8px;
+    border-color: transparent;
+}
+
+ul{
+    margin-left: 140px;
+    color: blue;
+    list-style-type: none;
+}
+
+li{
+    display: flex;
+    justify-content: space-between;
+    vertical-align: middle;
+    margin-bottom: 5px;
+    align-items: center;
+}
+
+li span{
+ display: inline-block;
+}
+
+li button {
+  display: inline-block;
+  vertical-align: middle;
+}
+.button-container {
+  display: flex; /* Arranges the buttons horizontally */
+  gap: 10px; /* Adds space between the buttons */
+}
+
+/* .button-del{
+    background-image: url("/Delete1.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 20px;
+    height: 20px;
+    alt: "No Image";
+    border: none;
+} */
+
+.button-edit{
+     background-image: url("/Edit2.png");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-color: #007bff; /* Example background color */
+        color: white;
+        border: none;
+        /* padding: 15px; /* Adjust padding as needed 
+        font-size: 16px; */
+        width: 22px; /* Example width */
+        height: 22px; /* Example height, equal to width */
+        text-align: center;
+        display: inline-block;
+        /*display: inline-flex;  For centering content inside */
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        border-radius: 50%;
+        margin-left: 20px;
+        vertical-align: middle;
+        
+}
+
+.button-save{
+     background-image: url("/Save1.png");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-color: #007bff; /* Example background color */
+        color: white;
+        border: none;
+        /* padding: 15px; /* Adjust padding as needed 
+        font-size: 16px; */
+        width: 22px; /* Example width */
+        height: 22px; /* Example height, equal to width */
+        text-align: center;
+        display: inline-block;
+        /*display: inline-flex;  For centering content inside */
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        border-radius: 50%;
+        margin-left: 20px;
+        vertical-align: middle;
+        
+}
+
+.button-del {
+        background-image: url("/Delete1.png");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-color: #007bff; /* Example background color */
+        color: white;
+        border: none;
+        /* padding: 15px; /* Adjust padding as needed 
+        font-size: 16px; */
+        width: 22px; /* Example width */
+        height: 22px; /* Example height, equal to width */
+        text-align: center;
+        display: inline-block;
+        /*display: inline-flex;  For centering content inside */
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        border-radius: 50%;
+         margin-left: 20px;
+        vertical-align: middle;
+    }
+
+    .button-cancel {
+        background-image: url("/Cancel1.png");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-color: #007bff; /* Example background color */
+        color: white;
+        border: none;
+        /* padding: 15px; /* Adjust padding as needed 
+        font-size: 16px; */
+        width: 22px; /* Example width */
+        height: 22px; /* Example height, equal to width */
+        text-align: center;
+        display: inline-block;
+        /*display: inline-flex;  For centering content inside */
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        border-radius: 50%;
+         margin-left: 20px;
+        vertical-align: middle;
+    }

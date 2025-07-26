@@ -1,0 +1,28 @@
+
+<div class="main">
+<h1 class="text-gradient">To Do List</h1>
+<form [formGroup]="todoForm" (ngSubmit)="AddTodo()">
+    <input formControlName="title" placeholder="Enter a Task">
+    <button class="button-add" type="submit">Add</button>
+</form>
+<ul>
+    <li *ngFor="let todo of todos()">
+        <ng-container *ngIf="todo.isEdit==false">
+        <span>{{todo.title}}</span>
+        <div class="button-container">
+        <button class="button-edit" title="Edit" (click)="EditTodo(todo.id)"></button>
+        <button class="button-del" title="Delete" (click)="DeleteTodo(todo.id)"></button>
+        </div>
+        </ng-container>
+        <ng-container *ngIf="todo.isEdit==true">
+        <span><input id="EditTaskInput" [(ngModel)]="todo.title" ></span>
+        <div class="button-container">
+        <button class="button-save" title="Save" (click)="SaveTodo(todo.id)"></button>
+        <button class="button-cancel" title="Cancel" (click)="CancelTodo(todo.id)"></button>
+        </div>
+        </ng-container>
+    </li>
+    
+</ul>
+</div>
+

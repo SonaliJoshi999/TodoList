@@ -65,6 +65,7 @@ export class ListComponent {
   CancelEdit(index:number):void{
     //this.EditId=-1;
     this.todoList[index].isEdit=false;
+    this.todoList[index].task=this.updatedItem[0].task;
     this.updatedItem=[];
     console.log(this.updatedItem);
   }
@@ -78,9 +79,10 @@ export class ListComponent {
       console.log(this.updatedItem);
       if(changedItem.length> - 1 && changedItem[0].task.trim()!=='')
       {
-         const presentItem =changedItem[0].task.toLowerCase().trim()===this.updatedItem[0].task.toLowerCase().trim();
+         //const presentItem =changedItem[0].task.toLowerCase().trim()===this.updatedItem[0].task.toLowerCase().trim();
+         const presentItem=this.todoList.filter((u)=>u.task.toLowerCase().trim()===changedItem[0].task.toLowerCase().trim());
          console.log(presentItem);
-         if(presentItem==false)
+         if(presentItem.length==1)
          {
             //this.todoList[id].task=changedItem[0].task.trim();
             //console.log("updated");

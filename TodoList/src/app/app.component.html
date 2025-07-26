@@ -1,4 +1,7 @@
-<app-list></app-list>
+<button (click)="toggleComponents('A')">Simple TodoList</button>
+<button (click)="toggleComponents('B')">TodoList using Forms</button>
 
+<app-list *ngIf="showTodoList"></app-list>
+<app-list-forms *ngIf="!showTodoList"></app-list-forms>
 
 <router-outlet />
